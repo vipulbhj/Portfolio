@@ -20,7 +20,7 @@ function markLinePrintedInLogWhenItsPreviousLineIsDone(lineNumber) {
 }
 
 async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
-  let url       = `https://www.api.github.com/repos/${username}/${repositoryName}/git/trees/master?recursive=2`;
+  let url       = `https://api.github.com/repos/${username}/${repositoryName}/git/trees/master?recursive=2`;
   let response  = await fetch(url);
   let result    = await response.json();
 
@@ -36,7 +36,7 @@ async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
   let randomlySelectedFile = codeFiles[Math.floor(Math.random() * codeFiles.length)];
   let filename = randomlySelectedFile.path;
 
-  url = `https://www.api.github.com/repos/${username}/${repositoryName}/contents/${filename}`;
+  url = `https://api.github.com/repos/${username}/${repositoryName}/contents/${filename}`;
   response = await fetch(url);
   result = await response.json();
   // content is base64 encoded and we need to decode it into string.
@@ -61,7 +61,7 @@ async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
 }
 
 async function getARandomRepoAndTypeItsContents(username) {
-  const url      = `https://www.api.github.com/search/repositories?q=user:${username}`;
+  const url      = `https://api.github.com/search/repositories?q=user:${username}`;
   const response = await fetch(url);
   const result   = await response.json();
   let repos      = [];
