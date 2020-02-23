@@ -55,7 +55,7 @@ h3 {
 }
 
 .fakeMenu {
-  width: 70%;
+  width: 90%;
   height: 25px;
   background-color: #bbb;
   margin: 0 auto;
@@ -64,7 +64,7 @@ h3 {
 }
 
 .fakeScreen {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   padding: 20px;
   border-bottom-left-radius: 5px;
