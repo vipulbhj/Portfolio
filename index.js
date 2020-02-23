@@ -6,7 +6,7 @@ const WAIT_TIME                      = 50; // 50 milliseconds
 const ALLOWED_EXTENSION              = ["py", "rb", "js", "c", "sh", "go"];
 
 /*
-linePrintedLog in a global variable shared by functions which is used to keep track of the lines in the code which have been printed. This is essential as this helps us synchronize the whole 'wrting out code effect'. 
+linePrintedLog in a global variable shared by functions which is used to keep track of the lines in the code which have been printed. This is essential as this helps us synchronize the whole 'wrting out code effect'.
 */
 let linePrintedLog = [];
 
@@ -20,10 +20,10 @@ function markLinePrintedInLogWhenItsPreviousLineIsDone(lineNumber) {
 }
 
 async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
-  let url       = `https://api.github.com/repos/${username}/${repositoryName}/git/trees/master?recursive=2`;
+  let url       = `https://www.api.github.com/repos/${username}/${repositoryName}/git/trees/master?recursive=2`;
   let response  = await fetch(url);
   let result    = await response.json();
-  
+
   let filesInRepository = result.tree;
   let codeFiles = filesInRepository.filter(file => {
     let fileExtension = file.path.split(".").slice(-1)[0];
@@ -35,8 +35,8 @@ async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
   }
   let randomlySelectedFile = codeFiles[Math.floor(Math.random() * codeFiles.length)];
   let filename = randomlySelectedFile.path;
-  
-  url = `https://api.github.com/repos/${username}/${repositoryName}/contents/${filename}`;
+
+  url = `https://www.api.github.com/repos/${username}/${repositoryName}/contents/${filename}`;
   response = await fetch(url);
   result = await response.json();
   // content is base64 encoded and we need to decode it into string.
@@ -61,7 +61,7 @@ async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
 }
 
 async function getARandomRepoAndTypeItsContents(username) {
-  const url      = `https://api.github.com/search/repositories?q=user:${username}`;
+  const url      = `https://www.api.github.com/search/repositories?q=user:${username}`;
   const response = await fetch(url);
   const result   = await response.json();
   let repos      = [];
@@ -90,7 +90,7 @@ function typeCode(txt, div, lineNumber, index = 0) {
     index++;
     setTimeout(() => typeCode(txt, div, lineNumber, index), WAIT_TIME);
   } else {
-    linePrintedLog[lineNumber] = true; 
+    linePrintedLog[lineNumber] = true;
   }
 }
 
