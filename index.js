@@ -20,7 +20,7 @@ function markLinePrintedInLogWhenItsPreviousLineIsDone(lineNumber) {
 }
 
 async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
-  let url       = `https:api.github.com/repos/${username}/${repositoryName}/git/trees/master?recursive=2`;
+  let url       = `https://api.github.com/repos/${username}/${repositoryName}/git/trees/master?recursive=2`;
   let response  = await fetch(url);
   let result    = await response.json();
   
@@ -61,7 +61,7 @@ async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
 }
 
 async function getARandomRepoAndTypeItsContents(username) {
-  const url      = `https:api.github.com/search/repositories?q=user:${username}`;
+  const url      = `https://api.github.com/search/repositories?q=user:${username}`;
   const response = await fetch(url);
   const result   = await response.json();
   let repos      = [];
