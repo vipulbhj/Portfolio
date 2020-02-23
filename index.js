@@ -20,7 +20,6 @@ function markLinePrintedInLogWhenItsPreviousLineIsDone(lineNumber) {
 }
 
 async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
-  console.log(username, repositoryName);
   let url       = `https://api.github.com/repos/${repositoryName}/git/trees/master?recursive=2`;
   let response  = await fetch(url);
   let result    = await response.json();
