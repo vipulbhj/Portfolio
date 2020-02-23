@@ -3,7 +3,7 @@
 const tryMeButton                    = document.getElementById("tryMeButton");
 const codeArea                       = document.getElementById("codeArea");
 const WAIT_TIME                      = 50; // 50 milliseconds
-const ALLOWED_EXTENSION              = ["py", "rb", "js", "c", "sh", "go"];
+const ALLOWED_EXTENSION              = ["py", "rb", "js", "c", "sh", "go", "java", ];
 
 /*
 linePrintedLog in a global variable shared by functions which is used to keep track of the lines in the code which have been printed. This is essential as this helps us synchronize the whole 'wrting out code effect'.
