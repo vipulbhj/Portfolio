@@ -66,7 +66,7 @@ async function getARandomRepoAndTypeItsContents(username) {
   const result   = await response.json();
   let repos      = [];
   result.items.forEach(i => {
-    repos.push(i.full_name.substring(8));
+    repos.push(i.full_name);
   });
   // Picking a random repo out of all public repos
   let repositoryName = repos[Math.floor(Math.random() * repos.length)];
