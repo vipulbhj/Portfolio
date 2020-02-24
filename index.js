@@ -23,17 +23,19 @@ async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
   let url       = `https://api.github.com/repos/${repositoryName}/git/trees/master?recursive=2`;
   let response  = await fetch(url);
   let result    = await response.json();
-  console.log(result, url);
 
   let filesInRepository = result.tree;
   let codeFiles = filesInRepository.filter(file => {
     let fileExtension = file.path.split(".").slice(-1)[0];
     return ALLOWED_EXTENSION.includes(fileExtension);
   });
+
   if(codeFiles.length === 0) {
     alert(`${repositoryName} has no code files of such extension`);
+    window.location.reload();
     return;
   }
+
   let randomlySelectedFile = codeFiles[Math.floor(Math.random() * codeFiles.length)];
   let filename = randomlySelectedFile.path;
 
@@ -69,6 +71,7 @@ async function getARandomRepoAndTypeItsContents(username) {
   result.items.forEach(i => {
     repos.push(i.full_name);
   });
+
   // Picking a random repo out of all public repos
   let repositoryName = repos[Math.floor(Math.random() * repos.length)];
   getCodeFromRepositoryAndTypeIt(username, repositoryName);
