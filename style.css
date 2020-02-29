@@ -85,6 +85,7 @@ h3 {
   width: 85%;
   overflow-x: auto;
   scrollbar-width: none;
+  white-space: nowrap;
   word-break: keep-all;
 }
 
