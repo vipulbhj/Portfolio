@@ -9,6 +9,7 @@ body {
   padding: 20px 0px;
   font-family: monospace;
   background-color: #272727;
+  counter-reset: codelines;
 }
 
 h3 {
@@ -66,14 +67,41 @@ h3 {
 .fakeScreen {
   width: 98%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 2px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #151515;
-  height: 70vh;
-  overflow: auto;
+  min-height: 70vh;
 }
 
 .fakeScreen > div {
-  color: #00d742; 
+  color: #00d742;
+  counter-increment: codelines; 
 }
+
+.fakeScreen > div::before {
+  content: counter(codelines);
+  display: inline-block;
+  color: wheat;
+  text-align: right;
+  width: 30px;
+  border-right: 1px solid powderblue;
+  padding-right: 10px;
+  margin-right: 15px;
+}
+
+./*fakeScreen > div:nth-child(n)::before {
+  content: counter(codelines);
+}
+
+.fakeScreen > div:nth-child(n+10)::before {
+  content: counter(codelines);
+}
+
+.fakeScreen > div:nth-child(n+100)::before {
+  content: counter(codelines);
+}
+
+.fakeScreen > div:nth-child(n+1000)::before {
+  content: counter(codelines);
+}*/
