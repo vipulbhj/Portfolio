@@ -85,6 +85,7 @@ h3 {
   width: 85%;
   overflow-x: auto;
   scrollbar-width: none;
+  word-break: keep-all;
 }
 
 .fakeScreen > div::before {
