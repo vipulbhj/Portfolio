@@ -57,8 +57,10 @@ async function getCodeFromRepositoryAndTypeIt(username, repositoryName) {
 
   codeLines.forEach(codeLine => {
     let codeLineDiv = document.createElement("div");
+    let codeLineP   = document.createElement('p');
     let code        = codeLine.replace(/ /g, '\u00a0').replace(/\t/g, '\u00a0\u00a0');
-    typeCode(code, codeLineDiv, lineNumber);lineNumber++;
+    typeCode(code, codeLineP, lineNumber);lineNumber++;
+    codeLineDiv.appendChild(codeLineP);
     codeArea.appendChild(codeLineDiv);
   });
 }
@@ -78,19 +80,19 @@ async function getARandomRepoAndTypeItsContents(username) {
 }
 
 // Index in the function defination is used as a marker of where we are in the code writing process and it set of zero till its the lines turn to start writing and after that maintains position.
-function typeCode(txt, div, lineNumber, index = 0) {
+function typeCode(txt, element, lineNumber, index = 0) {
   // The first line need no waiting.
   // Else for each line, Wait for previous line to complete printing.
   if(lineNumber !== 0 && !linePrintedLog[lineNumber-1]) {
-    setTimeout(() => typeCode(txt, div, lineNumber), WAIT_TIME);
+    setTimeout(() => typeCode(txt, element, lineNumber), WAIT_TIME);
     return;
   }
 
   // If line has text to be printed, print that. Else mark the line completed in log.
   if(index < txt.length) {
-    div.innerHTML += txt.charAt(index);
+    element.innerHTML += txt.charAt(index);
     index++;
-    setTimeout(() => typeCode(txt, div, lineNumber, index), WAIT_TIME);
+    setTimeout(() => typeCode(txt, element, lineNumber, index), WAIT_TIME);
   } else {
     linePrintedLog[lineNumber] = true;
   }

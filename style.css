@@ -72,12 +72,19 @@ h3 {
   border-bottom-right-radius: 5px;
   background-color: #151515;
   min-height: 70vh;
-  word-break: break-all;
 }
 
 .fakeScreen > div {
   color: #00d742;
-  counter-increment: codelines; 
+  counter-increment: codelines;
+}
+
+.fakeScreen > div > p {
+  display: inline-block;
+  position: absolute;
+  width: 85%;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 .fakeScreen > div::before {
@@ -106,3 +113,4 @@ h3 {
 .fakeScreen > div:nth-child(n+1000)::before {
   content: counter(codelines);
 }*/
+
