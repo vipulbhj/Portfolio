@@ -1,0 +1,413 @@
+html.dark {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html.dark img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: color 300ms, background-color 300ms;
+  background-color: #fff;
+}
+
+h1, h2, h3 {
+  font-family: "Rufina", serif;
+  color: #002d5b;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: normal;
+  line-height: 1.1;
+}
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #080827;
+  width: 100%;
+  padding: 15px;
+}
+
+footer a {
+  color: white;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: rgb(212, 209, 209);
+}
+
+footer .icons a {
+  color: white;
+}
+
+footer .fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+
+footer .fa:hover {
+  opacity: 0.7;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  color: #464d65;
+  font-size: 16px;
+  text-align: justify;
+}
+
+span {
+  color: #ec5b53;
+}
+
+section {
+  padding: 150px 30px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: outside;
+  line-height: 30px;
+  padding: 0px;
+  margin-left: 15px;
+}
+
+#about, #work {
+  max-width: 1000px;
+}
+
+#about .about-me {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.about-me .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  cursor: default;
+  transition: transform .5s;
+}
+
+.card a {
+  color: #035cb4;
+  text-decoration: none;
+}
+
+.card::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .15);
+  content: '';
+  opacity: 0;
+  z-index: -1;
+}
+
+.card:hover, .card:focus {
+  transform: scale3d(1.13, 1.13, 1);
+}
+
+#about p {
+  width: 80%;
+  line-height: 25px;
+}
+
+#about img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+#contact {
+  padding: 0px 30px;
+  margin-top: 150px;
+  background-color: #FFF9F9;
+  max-width: 100%;
+  height: 93vh;
+}
+
+#contact .contact-me {
+  margin: auto;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact p {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+#jobs {
+  max-width: 700px;
+}
+
+#jobs .history {
+  height: 40%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#jobs ul li {
+  margin-bottom: 15px;
+}
+
+#work .projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.projects .card {
+  margin: 15px 15px;
+}
+
+/* classes */
+
+.about-me .skills {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.btn {
+  background: #ec5b53;
+  padding: 27px 44px;
+  text-transform: capitalize;
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  -moz-user-select: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 0;
+  margin-bottom: 0;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.hero-element #description {
+  margin-top: 30px
+}
+
+.hero-element #greeting {
+  font-size: 22px;
+  margin-bottom: 15px
+}
+
+.hero-element #subtitle {
+  font-size: 50px;
+}
+
+.jumbotron {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background: #E1E5E8;
+}
+
+.jumbotron h1 {
+  margin-bottom: 15px;
+}
+
+.jumbotron #greeting {
+  line-height: 30px;
+  margin-bottom: 30px;
+  width: 60%;
+}
+
+.name {
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.navbar-light {
+  z-index: 6;
+  position: fixed;
+  top: 0;
+  min-height: 80px;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+.navbar-light .navbar-collapse ul {
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000019;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  margin: 0px 20px
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ec5b53;
+}
+
+.navbar-light .btn {
+  padding: 27px 30px;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0px;
+  color: black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #ec5b53;
+  border-left: 3px solid;
+  background-color: white;
+}
+
+
+@media (max-width: 1024px) {
+  footer {
+    margin-top: -50px;
+  }
+  section {
+    padding: 100px 30px;
+  }
+  #contact {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+  }
+  #contact .contact-me {
+    width: 100%;
+  }
+  #work .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  section #about, #jobs, #work {
+    margin: 0px
+  }
+  .jumbotron {
+    margin-top: 50px;
+  }
+  .name {
+    font-size: 40px;
+  }
+  .hero-element #subtitle {
+    font-size: 30px;
+  }
+  p {
+    font-size: 15px;
+  }
+  #about {
+    height: 100%;
+  }
+  #about p {
+    width: 100%;
+  }
+  #about .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #about img {
+    margin-top: 50px;
+    border-radius: 5px;
+    max-width: 225px;
+    height: auto;
+  }
+  #jobs {
+    padding-top: 30px;
+    display: block;
+  }
+  #jobs .history .company {
+    margin-bottom: 15px;
+  }
+  #jobs .history {
+    display: flex;
+    flex-direction: row;
+  }
+  #jobs .history .company {
+    padding: 20px 0px;
+  }
+  #jobs .nav-pills .nav-link {
+    padding: 0px 15px 5px 15px;
+  }
+  footer {
+    height: 70px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  footer a {
+    font-size: 10px;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #ec5b53;
+    border-left: 0px;
+    border-bottom: 3px solid;
+    background-color: white;
+  }
+
+  .copyrights {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 615px) {
+  #work .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
