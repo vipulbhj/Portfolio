@@ -33,13 +33,13 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #080827;
+  background: white;
   width: 100%;
   padding: 15px;
 }
 
 footer a {
-  color: white;
+  color: #070202;
   transition: 0.3s;
 }
 
@@ -49,7 +49,7 @@ footer a:hover {
 }
 
 footer .icons a {
-  color: white;
+  color: #070202;
 }
 
 footer .fa {
@@ -187,16 +187,62 @@ ul {
   justify-content: center;
 }
 
+#jobs .companies {
+  width: 100%;
+  list-style: none;
+  margin: 0px;
+
+  overflow-x: scroll;
+  scrollbar-width: none;
+
+  display: flex;
+  align-items: center;
+}
+
+#jobs .companies::-webkit-scrollbar {
+  display: none;
+}
+
+#jobs .companies li {
+  width: 30%;
+  margin: 0px;
+  padding: 20px 0px;
+
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.25rem;
+}
+
+#jobs .companies li img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 1px solid #ec5b53;
+
+  margin-bottom: 20px;
+}
+
 .projects .card {
   margin: 15px 15px;
 }
 
 /* classes */
 
+.about-me h5 {
+  line-height: 1.5;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
 .about-me .skills {
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 2fr;
+  padding-left: 10px;
 }
 
 .btn {
