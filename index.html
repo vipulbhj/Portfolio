@@ -75,7 +75,7 @@
             <div id="themeToggle">
               <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 
-              <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg style="display: none" id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
             </div>
             <span class="sr-only">(current)</span></a>
         </li>
@@ -83,7 +83,6 @@
     </div>
   </nav>
 
-  <!-- Hero Element -->
   <section class="jumbotron">
     <div class="hero-element">
       <h1 class="display-8 animated fadeInUp delay-.4s" id="greeting"><span>Hi, my name is</span></h1>
@@ -93,36 +92,52 @@
         I enjoy building, learning & exploring things that live on the web and beyond. I love to talk about all things related to technology, business, and almost anything interesting.
       </p>
       <div class="hero__btn">
-        <a href="mailto:namanshrimali@gmail.com" class="btn hvr-bounce-to-right animated fadeInLeft delay-.8s"
-          style="animation-delay: 0.8s;" tabindex="0">Get in touch</a>
+        <a href="mailto:vipulsworkmail@gmail.com" class="btn hvr-bounce-to-right animated fadeInLeft delay-.8s"
+          style="animation-delay: 0.8s;" tabindex="0" data-toggle="tooltip" data-placement="right" title="Opens Mail App">Get in Touch</a>
       </div>
     </div>
   </section>
 
-  <!-- About Me  -->
   <section id="about">
     <h1>About Me</h1>
     <div class="about-me">
       <div class="info">
         <p>Hello! I&apos;m Vipul, a software engineer based in India.</p>
-        <p>At my day job, I primarily work for on <a href="https://ulesson.com">uLesson</a>. An eLearning platform pioneering Online Learning in Western Africa Regions operating mainly in Nigeria, Gambia, Ghana. Working in a team with amazing people is a great experience as we get to tackle challenging problems on a daily basis, working on cutting edge technology build features like Live Classes, DRM content protection, etc. I been working on <a href="https://ulesson.com">uLesson</a> for more than a year and it&apos;s an amazing experience which involves learning lots of new things and solving difficult problems on a daily basis.</p>
-       
-        <p>Apart from work, I&apos;m constantly building small tools and/or Proof of Concept projects that can helps me in my day to day workflow(or just things of interest). I actively contribute to Open Source projects which are doing interesting things.</p>
         
-        <h3>What I Work With</h3>
+        <p>At my day job, I primarily work on <a href="https://ulesson.com">uLesson</a>. An eLearning platform <strong>pioneering learning at scale in Western Africa Regions like Nigeria, Gambia, Ghana, and more</strong>. Working with an amazing team, is a great experience involving tackle challenging problems, working with cutting-edge technology to build features like <strong>Live Classes, DRM Content Protection, etc</strong>. It&apos;s been more than an year of working on build, improving and enhancing the <a href="https://ulesson.com">uLesson</a> experience that involves learning lots of new things and solving difficult problems.</p>
+
+        <p>Apart from work, I&apos;m love to build small tools, POC(proof of concept) projects that can helps me in my day to day workflow(or just things of interest). I try to actively contribute to open source projects which solve interesting problems.</p>
+        
+        <h3>Things I have build stuff with</h3>
+        
+        <h5>Languages</h5>
         <ul class="skills">
-          <li>HTML &amp; CSS</li>
+          <li>Java</li>
+          <li>Ruby</li>
+          <li>Python</li>
           <li>Javascript</li>
+        </ul>
+
+        <h5>Framework And Libraries</h5>
+        <ul class="skills">
+          <li>Vue</li>
           <li>React</li>
-          <li>Electron</li>
-          <li>Node</li>
-          <li>PHP</li>
+          <li>Flask</li>
           <li>Laravel</li>
-          <li>Docker</li>
-          <li>AWS</li>
+          <li>Android</li>
+          <li>React Native</li>
+          <li>Ruby on Rails</li>
+          <li>NodeJS / Express</li>
+        </ul>
+
+        <h5>Tools And Services</h5>
+        <ul class="skills">
           <li>Redis</li>
-          <li>Travis CI</li>
-          <li>Mixpanel Analytics</li>
+          <li>Twilio</li>
+          <li>Bugsnag</li>
+          <li>Castlabs DRM</li>
+          <li>Agora RTC, RTM</li>
+          <li>AWS Lambda, S3, etc</li>
         </ul>
       </div>
       <img class="sepia" src="assets/avatar.png">
@@ -131,6 +146,7 @@
 
   <section id="jobs">
     <h1>Work History</h1>
+    <h3>Full Time and Internship Roles</h3>
     <div class="row history">
       <div class="company">
         <div class="nav nav-pills" role="tablist" aria-orientation="vertical">
@@ -171,8 +187,24 @@
         </div>
       </div>
     </div>
+
+    <h3>Freelance Work</h3>
+    <ul class="companies">
+      <li>
+        <img src="images/dcodr.png" alt="Dcoder" />
+        <a href="https://dcoder.tech/">Dcoder</a>
+      </li>
+      <li>
+        <img src="images/celebal.png" alt="Dcoder" />
+        <a href="https://www.celebaltech.com">Celebal</a>
+      </li>
+      <li>
+        <img src="images/localhostpro.jpg" alt="localhostPro" />
+        <a href="https://www.youtube.com/channel/UCimMK_VH-TxV3sGr4Yx6d1A">localhost Pro</a>
+      </li>
+    </ul>
   </section>
-  
+
   <section id="work">
     <h1>Somethings I've Built</h1>
     <div class="projects">
@@ -181,22 +213,22 @@
           <div class="card-title flex-space">
             NRAF<a href="https://github.com/vipulbhj/not-really-a-framework" class="fa fa-github"></a>
           </div>
-          <h6 class="card-subtitle mb-4 text-muted">NodeJS Framework</h6>
+          <h6 class="card-subtitle mb-4 text-muted">Node Framework</h6>
           <p class="card-text">
-            <span>NRAF</span> is a lightweight, dependency free NodeJS framework. Designed to be used as a minimal api framework, it also serves as a non overwhelming resource for folks are new to framework development to get a feel for it.
-            <h6 class="card-subtitle mb-2 text-muted">NodeJS Framework</h6>
+            <span>NRAF</span> is a <em><strong>lightweight, zero dependency (no external libraries are used)</strong></em> NodeJS Framework. <span>NRAF</span> <em>is used in couple of production apps and has 14 plus &#9733; on github</em>. Designed as a minimal REST API framework, it also serves as a non overwhelming resource for folks are new to framework development and want to get a feel for it.
+            <h6 class="card-subtitle mb-2 text-muted">Node Framework</h6>
           </p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
           <div class="card-title flex-space">
-            React Banking App<a href="https://github.com/vipulbhj/React-Banking-App" class="fa fa-github"></a>
+            Banking App Starter<a href="https://github.com/vipulbhj/React-Banking-App" class="fa fa-github"></a>
           </div>
-          <h6 class="card-subtitle mb-4 text-muted">A React App</h6>
+          <h6 class="card-subtitle mb-4 text-muted">Demo React App</h6>
           <p class="card-text">
-            A sample React Banking App which includes secure Authentication, Authorization, Applying for a loan, Saving progress for partially filled loan form upon logout, Loan Categorization based on the forms complition status, Auto logout after a set time of inactivity, and more.
-            <h6 class="card-subtitle mb-2 text-muted">ReactJS</h6>
+            A project built as part of hiring challenge, later open sourced for learning use which includes features like secure authentication, authorization, applying for a loan, saving progress for partially filled loan form upon logout, loan categorization based on the forms complition status, auto logout after a set time of inactivity, and more.
+            <h6 class="card-subtitle mb-2 text-muted">React, Flask</h6>
           </p>
         </div>
       </div>
@@ -205,34 +237,33 @@
           <div class="card-title flex-space">
             Colourful Crap<a href="https://github.com/vipulbhj/Colorful-crap" class="fa fa-github"></a>
           </div>
-          <h6 class="card-subtitle mb-4 text-muted">A fun Chrome Extension </h6>
+          <h6 class="card-subtitle mb-4 text-muted">A Fun Chrome Extension</h6>
           <p class="card-text">
             Colourful Crap is a fun chrome extension that gives a unique jazz to your NewTab window. When you open the New Tab, instead of showing the boring default page, it shows you quotes on colourful backgrounds which are picked from a random set of colours and users can also add there favourite quotes.
-            <h6 class="card-subtitle mb-2 text-muted">Javascript, Chrome Api&apos;s</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Javascript, Chrome APIs</h6>
           </p>
         </div>
       </div>
     </div>
+
+    <h1>And there is a lot more, which you can find <a href="https://github.com/vipulbhj">here</a>.</h1>
   </section>
 
   <section id="contact">
     <div class="contact-me">
       <span>What's next ?</span>
       <h1>Get In Touch</h1>
-      <p>
-        I'm currently <strong>not</strong> looking for any new opportunities, but my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you as soon as I can.
-      </p>
+      <p>I'm actively looking for my next role where I can help build something meaningful and grow professionally. So if you have a question or just want to say hi, feel free to reach out and I'll try my best to get back asap.</p>
       <div class="hero__btn">
-        <a href="mailto:vipulsworkmail@gmail.com" class="btn hvr-bounce-to-bottom animated" tabindex="0">
-          Say Hii
+        <a href="mailto:vipulsworkmail@gmail.com" class="btn hvr-bounce-to-right animated fadeInLeft delay-.8s"
+          style="animation-delay: 0.8s;" tabindex="0" data-toggle="tooltip" data-placement="right" title="Opens Mail App">Get in Touch
         </a>
       </div>
-      <p class="text-muted">opens email app</p>
     </div>
   </section>
 
   <footer>
-    <a href="#" class="copyrights">&copy; Vipulbhj.tech</a>
+    <a href="#" class="copyrights">&copy; vipulbhj.tech</a>
     <div class="icons">
       <a href="https://github.com/vipulbhj" class="fa fa-github"></a>
       <a href="https://linkedin.com/in/vipulbhj" class="fa fa-linkedin"></a>
@@ -275,6 +306,7 @@
 
     window.onload = function() {
       loadTheme();
+      
       document.getElementById('themeToggle').addEventListener('click', function() {
         var theme = localStorage.getItem('theme');
         if(theme && theme === 'dark') {
@@ -283,6 +315,8 @@
           setTheme('dark');
         }
       });
+
+      $('[data-toggle="tooltip"]').tooltip();
     }
   </script>
 </body>
