@@ -215,6 +215,8 @@ ul {
   align-items: center;
 
   font-size: 1.25rem;
+
+  text-align: center;
 }
 
 #jobs .companies li img {
@@ -224,6 +226,12 @@ ul {
   border: 1px solid #ec5b53;
 
   margin-bottom: 20px;
+}
+
+#jobs .companies li a {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .projects .card {
